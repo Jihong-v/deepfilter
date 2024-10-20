@@ -34,6 +34,9 @@ import VisualUpdateOptions = powerbi.extensibility.visual.VisualUpdateOptions;
 import IVisual = powerbi.extensibility.visual.IVisual;
 
 import { VisualFormattingSettingsModel } from "./settings";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import FilterDropdown from "./components/filterDropdown";
 
 export class Visual implements IVisual {
     private target: HTMLElement;
@@ -49,7 +52,7 @@ export class Visual implements IVisual {
         this.updateCount = 0;
         if (document) {
             const new_p: HTMLElement = document.createElement("p");
-            new_p.appendChild(document.createTextNode("Update count:"));
+            new_p.appendChild(document.createTextNode("Update method called already:"));
             const new_em: HTMLElement = document.createElement("em");
             this.textNode = document.createTextNode(this.updateCount.toString());
             new_em.appendChild(this.textNode);
