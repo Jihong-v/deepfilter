@@ -1,12 +1,12 @@
 {
     "dataRoles": [
         {
-            "displayName": "Category Data",
+            "displayName": "Level 1 Filter",
             "name": "category",
             "kind": "Grouping"
         },
         {
-            "displayName": "Measure Data",
+            "displayName": "Level 2 Filter",
             "name": "measure",
             "kind": "Measure"
         }
@@ -57,7 +57,7 @@
             "categorical": {
                 "categories": {
                     "for": {
-                        "in": "category"
+                        "in": "Level 1 Filter"
                     },
                     "dataReductionAlgorithm": {
                         "top": {}
